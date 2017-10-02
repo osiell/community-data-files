@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
+# Python source code encoding : https://www.python.org/dev/peps/pep-0263/
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2011 Numérigraphe SARL.
+#    This module copyright :
+#        (c) 2015 Antiun Ingenieria, SL (Madrid, Spain, http://www.antiun.com)
+#                 Antonio Espinosa <antonioea@antiun.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,4 +22,14 @@
 #
 ##############################################################################
 
-from . import models
+from openerp import models, fields
+
+
+class ResPartner(models.Model):
+    _inherit = 'res.partner'
+
+    main_nace = fields.Many2one(comodel_name='res.partner.nace',
+                                string="Main activity", ondelete='set null')
+    secondary_naces = fields.Many2many(comodel_name='res.partner.nace',
+                                       string="Other activities",
+                                       ondelete='set null')
