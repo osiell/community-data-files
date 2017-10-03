@@ -7,10 +7,10 @@
             <field name="inherit_id" ref="base.view_partner_form" />
             <field name="arch" type="xml">
 
-                <field name="category_id" position="attributes">
+                <!-- <field name="category_id" position="attributes">
                     <attribute name="context">{'partner_category_display': 'short'}</attribute>
                     <attribute name="options">{"always_reload": True}</attribute>
-                </field>
+                </field> -->
 
 
 
@@ -26,9 +26,7 @@
             </field>
         </record>
 
-
-
-        <record model="ir.ui.view" id="res_partner_kanban_view">
+        <!-- <record model="ir.ui.view" id="res_partner_kanban_view">
             <field name="name">Partner kanban : short category name</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.res_partner_kanban_view" />
@@ -38,9 +36,7 @@
                     <attribute name="options">{"always_reload": True}</attribute>
                 </field>
             </field>
-        </record>
-
-
+        </record> -->
 
         <record model="ir.ui.view" id="view_res_partner_filter_nace">
             <field name="name">Partner search with activity</field>
@@ -58,11 +54,4 @@
             </field>
         </record>
     </data>
-
-
-
-
-
-
-
 </openerp>

@@ -28,8 +28,6 @@ from openerp import models, fields
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    main_nace = fields.Many2one(comodel_name='res.partner.nace',
-                                string="Main activity", ondelete='set null')
-    secondary_naces = fields.Many2many(comodel_name='res.partner.nace',
-                                       string="Other activities",
+    nace_ids = fields.Many2many(comodel_name='res.partner.nace',
+                                       string="Activities (NACE)",
                                        ondelete='set null')
