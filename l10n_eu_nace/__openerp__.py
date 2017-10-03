@@ -26,7 +26,10 @@
     "category": "Localization",
     "data": [
         "data/res.partner.category.csv",
-        'partner_view.xml',
+        'views/res_partner_nace.xml',
+        'views/res_partner.xml',
+        'wizard/nace_import_view.xml',
+        'security/ir.model.access.csv',
     ],
     'installable': True,
     'license': 'AGPL-3',
