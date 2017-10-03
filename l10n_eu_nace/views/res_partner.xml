@@ -44,11 +44,6 @@
                 <field name="category_id" position="after">
                     <field name="nace_ids"/>
                 </field>
-                <filter string="Salesperson" position="after">
-                    <filter string="Activity"
-                            domain="[('is_company', '=', True)]"
-                            context="{'group_by': 'main_nace'}"/>
-                </filter>
             </field>
         </record>
     </data>
