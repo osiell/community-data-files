@@ -25,7 +25,6 @@
     'author': u'Numérigraphe SARL,Sistheo,Odoo Community Association (OCA)',
     "category": "Localization",
     "data": [
-        "data/res.partner.category.csv",
         'views/res_partner_nace.xml',
         'views/res_partner.xml',
         'wizard/nace_import_view.xml',
