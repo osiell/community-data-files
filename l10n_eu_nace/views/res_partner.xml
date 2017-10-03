@@ -16,9 +16,7 @@
 
                 <div name="buttons" position="after">
                     <group>
-                        <field name="main_nace"
-                               attrs="{'invisible': [('is_company', '=', False)]}"/>
-                        <field name="secondary_naces" widget="many2many_tags"
+                        <field name="nace_ids"
                                attrs="{'invisible': [('is_company', '=', False)]}"/>
                     </group>
                 </div>
@@ -44,7 +42,7 @@
             <field name="inherit_id" ref="base.view_res_partner_filter"/>
             <field name="arch" type="xml">
                 <field name="category_id" position="after">
-                    <field name="main_nace"/>
+                    <field name="nace_ids"/>
                 </field>
                 <filter string="Salesperson" position="after">
                     <filter string="Activity"

@@ -27,7 +27,7 @@ def fix_nace_id(env):
         '|', ('active', '=', True), ('active', '=', False),
         ('category_id', '!=', False),
         #('category_id', 'in', nace_categ_ids)
-        ('category_id', 'child of', nace_categ_ids)
+        ('category_id', 'child_of', nace_categ_ids)
         ])
 
     for partner in res_partners:
