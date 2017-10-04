@@ -42,4 +42,5 @@ def fix_nace_id(env):
                     nace.ensure_one()
                     partner.nace_ids |= nace
                     category_ids += category
-    category_ids.unlink()
+                    category.active= False
+    data_records.unlink()
