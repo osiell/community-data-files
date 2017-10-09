@@ -45,7 +45,6 @@ def fix_nace_id(env):
         ])
 
     for partner in res_partners:
-        category_ids = category_model.browse()
         for category in partner.category_id:
             if category in nace_categs:
                 if re.match("^\[.*\]", category.name):
@@ -53,6 +52,5 @@ def fix_nace_id(env):
                     nace = env['res.partner.nace'].search([('code', '=', nace_code)])
                     nace.ensure_one()
                     partner.nace_ids |= nace
-                    #category_ids += category
-                    #category.active= False
-    #data_records.unlink()
+    nace_categs.write({'active': False})
+    data_records.unlink()
